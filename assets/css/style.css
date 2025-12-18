@@ -45,13 +45,53 @@ body {
   font-weight: 600;
 }
 
-.lang-dropdown-content a {
-   display: flex;
-   align-items: center;
-   gap: 8px;
-   padding: 6px 10px;
-   text-decoration: none;
+
+
+
+/* === LANGUAGE DROPDOWN === */
+/* Spesifik kodlardaki stiller burada birleştirildi. */
+.lang-dropdown {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
+
+.lang-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  background-color: #fff;
+  color: #122;
+  min-width: 140px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Daha spesifik olan “a” stilleri tercih edildi. */
+.lang-dropdown-content a {
+  color: blue;
+  text-decoration: none;
+  display: block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.lang-dropdown-content a:hover {
+  background-color: #f0f0f0;
+  color: darkblue;
+}
+
+.lang-dropdown:hover .lang-dropdown-content {
+  display: block;
+}
+
 
 .lang-dropdown-content img {
    width: 18px;
